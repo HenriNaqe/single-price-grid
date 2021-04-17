@@ -1,0 +1,128 @@
+body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+.container {
+  display: grid;
+  grid-template-columns: 25rem 25rem;
+  grid-template-rows: 19rem 19rem;
+  grid-template-areas:
+    "box1 box1"
+    "box2 box3";
+}
+.box1 {
+  background-color: white;
+  grid-area: box1;
+  padding: 40px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.box2 {
+  background-color: #2bb3b1;
+  grid-area: box2;
+  padding: 40px;
+  color: whitesmoke;
+  border-bottom-left-radius: 15px;
+}
+.box3 {
+  background-color: #4abebd;
+  grid-area: box3;
+  padding: 40px;
+  color: whitesmoke;
+  border-bottom-right-radius: 15px;
+}
+h1 {
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
+}
+.header1 {
+  color: hsl(179, 62%, 43%);
+}
+h2 {
+  font-family: "Karla", sans-serif;
+}
+.subheader1 {
+  color: hsl(71, 73%, 54%);
+}
+.text1 {
+  font-family: "Karla", sans-serif;
+  color: hsl(218, 22%, 67%);
+  letter-spacing: 0.8px;
+  line-height: 2;
+}
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  position: relative;
+  bottom: 15px;
+}
+.month {
+  margin-left: 20px;
+  font-weight: 100;
+}
+h3 {
+  font-family: "Karla", sans-serif;
+}
+.footer {
+  position: relative;
+  bottom: 40px;
+}
+.btn {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 5px;
+  font-family: "Karla", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  background: #bfdf32;
+  padding: 15px 120px 15px 120px;
+  text-decoration: none;
+  position: relative;
+  bottom: 30px;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #ffffff;
+  color: #bfdf32;
+  text-decoration: none;
+}
+p {
+  font-family: "Karla", sans-serif;
+  font-weight: 100;
+  line-height: 1.5;
+  letter-spacing: 2.5px;
+}
+@media (max-width: 500px) {
+  .container {
+    display: grid;
+    grid-template-columns: 20rem;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3";
+    border: 20px 10px 20px 10px;
+  }
+  .box1 {
+    padding: 20px;
+  }
+  .box2 {
+    padding: 20px;
+    border-bottom-left-radius: 0px;
+  }
+  .box3 {
+    padding: 20px;
+    border-bottom-left-radius: 15px;
+  }
+  .text1 {
+    letter-spacing: normal;
+  }
+  .btn {
+    padding: 15px 100px 15px 100px;
+  }
+}
